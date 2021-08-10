@@ -1,4 +1,4 @@
-const signupService = require("../../MongoDB-Login-Sign-UP/models/userSchema");
+const signupService = require("../models/userSchema");
 const Joi = require("joi");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
@@ -7,8 +7,7 @@ const signup = async (req, res) => {
     const Schema = Joi.object({
         username: Joi.string().min(3).max(30).required(),
         email: Joi.string().email().required(),
-        password: Joi.string().required(),
-        cityId : Joi.string().required()
+        password: Joi.string().required()
     })
 
     let validateSchema = Schema.validate(req.body);

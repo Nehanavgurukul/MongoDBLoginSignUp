@@ -1,4 +1,4 @@
-const MyCollection = require("../../MongoDB-Login-Sign-UP/models/userSchema");
+const MyCollection = require("../models/userSchema");
 
 const getUsers = async (req, res) => {
     const result = await MyCollection.find({})

@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-require("../../MongoDBLoginSignUp/database/connectionDB");
 
 const UserSchema = new mongoose.Schema({
     username : {
@@ -16,10 +15,6 @@ const UserSchema = new mongoose.Schema({
         type : String,
         required : true,
         StorageManager :true
-    },
-    cityId : {
-        type : String,
-        required : true
     }
 })
 

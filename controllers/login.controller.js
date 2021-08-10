@@ -1,4 +1,4 @@
-const MyCollection = require("../../MongoDB-Login-Sign-UP/models/userSchema");
+const MyCollection = require("../models/userSchema");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt")
 const { createToken } = require("../middlewares/createToken")
